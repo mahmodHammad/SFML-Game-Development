@@ -1,7 +1,9 @@
 #include<SFML\Graphics.hpp>
 #include"Game.h"
+
 int main()
 {
+	
 	sf::err().rdbuf(NULL);
 	Game game;
 	game.run();
@@ -13,7 +15,8 @@ int main()
 	////for (auto &f : vec)
 	////	sum += f;
 	//for (long i = 0; i < vec.size(); i++)
-	//	sum += vec[i];
+	//	sum +=
+	//vec[i];
 
 	//int end = clock();
 

@@ -3,7 +3,6 @@
   <ItemGroup>
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="ResourceHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
@@ -13,5 +12,8 @@
     <Filter Include="resource">
       <UniqueIdentifier>{5771d4de-6fb0-475a-ba1d-68b9e16e38de}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResourceHandler.inl" />
   </ItemGroup>
 </Project>

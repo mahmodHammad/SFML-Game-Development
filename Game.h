@@ -3,7 +3,10 @@
 #include"ResourceHandler.h"
 class Game
 {
-	ResourceHandler resource;
+	 ResourceHolder <sf::Texture,Textures::ID> resource;
+
+
+
 	sf::RenderWindow mwindow;
 	sf::Texture mtexture;
 	sf::Sprite mplayer;
