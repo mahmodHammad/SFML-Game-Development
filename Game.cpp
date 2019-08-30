@@ -4,10 +4,10 @@
 Game::Game():mwindow(sf::VideoMode(666,444) ,"coky poky"),mplayer(),mtexture()
 {
 
-	resource.load(Textures::Airplane, "resources/Textures/Raptor.png");
+//	resource.load(Textures::Airplane, "resources/Textures/Raptor.png");
 //	resource.load(Textures::Missle, "resources/Textures/Eagle.png");
 
-	mplayer.setTexture(resource.get(Textures::Airplane));
+//	mplayer.setTexture(resource.get(Textures::Airplane));
 	mplayer.setPosition(200.f , 200.f);
 
 

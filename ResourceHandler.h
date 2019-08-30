@@ -4,14 +4,14 @@
 #include<map>
 #include<assert.h>
 #include<iostream>
-namespace Textures {enum ID{landscape ,Airplane,Missle};}
+namespace Textures {enum ID{ Eagle, Raptor};}
+
+typedef ResourceHolder<sf::Texture, Textures::ID> TextureHolder;
 
 template <typename Resource, typename Identifier>
 class ResourceHolder
 {
 public:
-//	ResourceHolder();
-
 	void load(Identifier id,	const std::string& filename);
 
 	template<typename Parameter>

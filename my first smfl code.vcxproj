@@ -153,12 +153,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Aircraft.cpp" />
+    <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="SceneNode.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="SpriteNode.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Aircraft.h" />
+    <ClInclude Include="Entity.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="ResourceHandler.h" />
+    <ClInclude Include="SceneNode.h" />
+    <ClInclude Include="SpriteNode.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ResourceHandler.inl" />

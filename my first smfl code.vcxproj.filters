@@ -3,14 +3,33 @@
   <ItemGroup>
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Entity.cpp">
+      <Filter>Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Aircraft.cpp">
+      <Filter>Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneNode.cpp" />
+    <ClCompile Include="SpriteNode.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
     <ClInclude Include="ResourceHandler.h" />
+    <ClInclude Include="Entity.h">
+      <Filter>Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Aircraft.h">
+      <Filter>Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneNode.h" />
+    <ClInclude Include="SpriteNode.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="resource">
       <UniqueIdentifier>{5771d4de-6fb0-475a-ba1d-68b9e16e38de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity">
+      <UniqueIdentifier>{4012b83e-e58f-4b52-b51b-a9ece4f85be3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
