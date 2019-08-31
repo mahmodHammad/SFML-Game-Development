@@ -1,10 +1,9 @@
 #pragma once
 #include<SFML\Graphics.hpp>
-#include"ResourceHandler.h"
+#include"World.h"
 class Game
 {
-	 ResourceHolder <sf::Texture,Textures::ID> resource;
-
+	// ResourceHolder <sf::Texture,Textures::ID> resource;
 
 
 	sf::RenderWindow mwindow;
@@ -24,6 +23,9 @@ class Game
 	void render();
 
 	void handlePlayerInput(sf::Keyboard::Key key ,bool isPressed);
+	
+	
+	World mworld;
 public:
 	Game();
 	void run();

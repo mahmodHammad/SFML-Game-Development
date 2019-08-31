@@ -159,6 +159,7 @@
     <ClCompile Include="SceneNode.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="SpriteNode.cpp" />
+    <ClCompile Include="World.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Aircraft.h" />
@@ -167,6 +168,7 @@
     <ClInclude Include="ResourceHandler.h" />
     <ClInclude Include="SceneNode.h" />
     <ClInclude Include="SpriteNode.h" />
+    <ClInclude Include="World.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ResourceHandler.inl" />

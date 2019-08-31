@@ -1,7 +1,7 @@
 #include "Game.h"
 
 
-Game::Game():mwindow(sf::VideoMode(666,444) ,"coky poky"),mplayer(),mtexture()
+Game::Game():mwindow(sf::VideoMode(666,444) ,"coky poky"),mplayer(),mtexture(),mworld(mwindow)
 {
 
 //	resource.load(Textures::Airplane, "resources/Textures/Raptor.png");
@@ -74,12 +74,19 @@ void Game::update(sf::Time deltaTime)
 	if (mIsMovingRight)
 		movement.x += 1.f;
 	mplayer.move(movement*deltaTime.asSeconds()*speed);
+	mworld.update(deltaTime);
 }
 
 void Game::render()
 {
 	mwindow.clear();
-	mwindow.draw(mplayer);
+
+	//mwindow.draw(mplayer);
+	mworld.draw();
+
+
+	mwindow.setView(mwindow.getDefaultView());
+//	mWindow.draw(mStatisticsText);
 	mwindow.display();
 }
 

@@ -21,6 +21,8 @@ std::unique_ptr<SceneNode> SceneNode::detachChild(const SceneNode & node)
 
 	Ptr result = std::move(*found);
 	result->mParent = nullptr;
+	mchildren.erase(found);
+	return result;
 }
 
 

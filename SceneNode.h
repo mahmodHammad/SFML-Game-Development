@@ -7,12 +7,9 @@
 class SceneNode:public sf::Transformable
 	,public sf::Drawable ,private sf::NonCopyable
 {
-private:
-	typedef std::unique_ptr<SceneNode> Ptr;
-	std::vector<Ptr> mchildren;
-	SceneNode*		 mParent;
 
 public:
+	typedef std::unique_ptr<SceneNode> Ptr;
 	SceneNode();
 
 	void attachChild(Ptr child);
@@ -20,6 +17,9 @@ public:
 	
 	void update(sf::Time dt);
 
+private:
+	std::vector<Ptr> mchildren;
+	SceneNode*		 mParent;
 private:
 	/*
 	it has to deal with different transforms:
