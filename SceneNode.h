@@ -29,17 +29,13 @@ private:
 	hold the passed transform ,,from strate witch 
 	has member variable transform of type sf::transform
 	*/
-	virtual void draw(sf::RenderTarget&target, 
-		sf::RenderStates states)const;
+	virtual void draw(sf::RenderTarget&target, sf::RenderStates states)const;
 
 	//draw only the current not child
-	virtual void drawCurrent(sf::RenderTarget&target,
-		sf::RenderStates states) const;
+	virtual void drawCurrent(sf::RenderTarget&target,sf::RenderStates states) const;
 
 
 	virtual void updateCurrent(sf::Time dt);
 	void updateChildren(sf::Time dt);
 
-	sf::Transform getWorldTransform();//const
-	sf::Vector2f  getWorldPosition();//const
 };

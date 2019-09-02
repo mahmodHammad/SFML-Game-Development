@@ -9,6 +9,5 @@ private:
 public:
 	SpriteNode(const sf::Texture &texture);
 	SpriteNode(const sf::Texture &texture , const sf::IntRect &rect);
-
 };
 

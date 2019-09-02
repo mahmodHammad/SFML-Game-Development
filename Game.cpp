@@ -1,24 +1,13 @@
 #include "Game.h"
 
 
-Game::Game():mwindow(sf::VideoMode(666,444) ,"coky poky"),mplayer(),mtexture(),mworld(mwindow)
+Game::Game():mwindow(sf::VideoMode(640,800) ,"coky poky"),mworld(mwindow)
 {
-
-//	resource.load(Textures::Airplane, "resources/Textures/Raptor.png");
-//	resource.load(Textures::Missle, "resources/Textures/Eagle.png");
-
-//	mplayer.setTexture(resource.get(Textures::Airplane));
-	mplayer.setPosition(200.f , 200.f);
-
-
 	mIsMovingUp    =false;
 	mIsMovingDown  =false;
 	mIsMovingLeft  =false;
 	mIsMovingRight =false;
-	
-	speed = 100;
 	timePerFrame = sf::seconds(1.f / 60.f);
-
 }
 
 void Game::processEvents()
@@ -48,8 +37,6 @@ void Game::processEvents()
 	}
 }
 
-
-
 void Game::handlePlayerInput(sf::Keyboard::Key key, bool isPressed)
 {
 	if (key == sf::Keyboard::W)
@@ -73,7 +60,7 @@ void Game::update(sf::Time deltaTime)
 		movement.x -= 1.f; 
 	if (mIsMovingRight)
 		movement.x += 1.f;
-	mplayer.move(movement*deltaTime.asSeconds()*speed);
+
 	mworld.update(deltaTime);
 }
 
@@ -81,12 +68,8 @@ void Game::render()
 {
 	mwindow.clear();
 
-	//mwindow.draw(mplayer);
 	mworld.draw();
-
-
-	mwindow.setView(mwindow.getDefaultView());
-//	mWindow.draw(mStatisticsText);
+//	mwindow.setView(mwindow.getDefaultView());
 	mwindow.display();
 }
 

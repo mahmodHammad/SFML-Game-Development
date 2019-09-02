@@ -30,8 +30,8 @@ class World:private sf::NonCopyable
 {
 
 private:
-	enum Layer{	Background, Air, LayerCount	};
 	sf::RenderWindow&					mWindow;
+	enum Layer{	Background, Air, LayerCount	};
 	sf::View							mWorldView;
 	TextureHolder						mTextures;
 	SceneNode							mSceneGraph;

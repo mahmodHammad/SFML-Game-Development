@@ -3,15 +3,18 @@
 
 World::World(sf::RenderWindow & window):mWindow(window)
 ,mWorldView(window.getDefaultView())
-,mWorldBounds(0.f,0.f,mWorldView.getSize().x,2000)
+,mWorldBounds(0.f,0.f,mWorldView.getSize().x,100100)
 ,mSpawnPosition(mWorldView.getSize().x/2.f ,
 	mWorldBounds.height - mWorldView.getSize().x) //not sure
 ,mPlayerAircraft(nullptr)
 
 {
+	mScrollSpeed = -1115;//habda
+
 	loadTextures();
 	buildScene();
-	mWorldView.setCenter(mSpawnPosition); //dont know
+
+	mWorldView.setCenter(mSpawnPosition); //center view with player
 }
 
 
@@ -40,9 +43,7 @@ void World::buildScene() //dont know
 	texture.setRepeated(true);
 
 
-	//it shouldnt work
 	std::unique_ptr<SpriteNode> backgroundSprite(new SpriteNode(texture, textureRect));
- 
 	backgroundSprite->setPosition(mWorldBounds.left,mWorldBounds.top);
 	mSceneLayers[Background]->attachChild(std::move(backgroundSprite));
 
@@ -58,9 +59,6 @@ void World::buildScene() //dont know
 	leftEscort->setPosition(-80.f, 50.f);
 	mPlayerAircraft->attachChild(std::move(leftEscort));
 
-	std::unique_ptr<Aircraft> rightEscort(new Aircraft(Aircraft::Raptor, mTextures));
-	rightEscort->setPosition(80.f, 50.f);
-	mPlayerAircraft->attachChild(std::move(rightEscort));
 }
 
 void World::draw()
